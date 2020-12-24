@@ -6,7 +6,7 @@ CWD = r'<basepath>'
 REGEX_DATESENDER = r'^(?:[0-3][0-9])\/(?:[0-1][0-9])\/(?:[0-9]{2,4})(?:\s([0-2][0-9]:[0-6][0-9]))*(\s-\s[ \w]*:)*'
 REGEX_IMAGE = r'(IMG-\d{8}-WA\d{4}.jpg)\s*(\(\b.*\))'  # find `IMG-20201027-WA0021.jpg (arquivo anexado)`
 REGEX_AUDIO = r'(PTT-\d{8}-WA\d{4}.opus)\s*(\(\b.*\))'  # find  `PTT-20201027-WA0026.opus (arquivo anexado)`
-FILE_PATH = f'{CWD}/Conversa do WhatsApp com Marcelo Cunha.txt'
+FILE_PATH = f'{CWD}/file.txt'
 
 
 def treat_rst_mixup(text):
