@@ -10,7 +10,11 @@ FILE_PATH = f'{CWD}/file.txt'
 
 
 def treat_rst_mixup(text):
-
+    '''
+    replace possible restructuredtext formats .
+    '''
+    text.replace('===', '= = =')
+    text.replace('***', '* * *')
     return text.replace('---', '- - -')
 
 
