@@ -1,6 +1,4 @@
 import re
-import os
-
 
 REGEX_DATESENDER = r'^(?:[0-3][0-9])\/(?:[0-1][0-9])\/(?:[0-9]{2,4})(?:\s([0-2][0-9]:[0-6][0-9]))*(\s-\s[ \w]*:)*'
 REGEX_IMAGE = r'(IMG-\d{8}-WA\d{4}.jpg)\s*(\(\b.*\))'  # find `IMG-20201027-WA0021.jpg (arquivo anexado)`
@@ -69,8 +67,8 @@ def extract_date_sender(text):
     return (f'{date_sender}', f'    {message}')
 
 
-def output(iputfilename, media_path=''):
-    outputfile = open('output.rst', 'w')
+def output(iputfilename, outputfilename='output.rst', media_path=''):
+    outputfile = open(outputfilename, 'w')
     print(f'media_path:{media_path}')
     with open(iputfilename, 'r') as whatsappfile:
         line = None

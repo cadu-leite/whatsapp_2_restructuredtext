@@ -1,11 +1,12 @@
 import argparse
-import sys
 import errno
 import os
-
+import sys
 
 from pathlib import Path
+
 from zap2rst import zap2rst
+
 
 DESCRIPTION = '''
     Convert Whatsapp exported files to RestructuredText ..., then html or pdf.
@@ -78,9 +79,9 @@ def main(args):
 
     # if media path is informed supress base path
     media_path = args.mediapath or get_base_path(args.input)
-
+    outputfilename = args.output or 'output.rst'
     # start to export.
-    rst_file_name = zap2rst.output(args.input, media_path)
+    rst_file_name = zap2rst.output(args.input, outputfilename=outputfilename, media_path=media_path)
 
     return rst_file_name
 
