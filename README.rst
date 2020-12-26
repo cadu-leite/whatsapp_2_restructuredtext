@@ -1,8 +1,10 @@
-whatsapp_exp2pdf
-================
+whatsapp 2 RestructuredText
+===========================
 
 
-Whatsapp files export to PDF
+Export whatsapp conversation files and media to RestructuredText
+
+then using `pandoc`, `rst2pdf`, `rst2html5`, `sphinx`  you may have PDF or HTML version of a Whatsapp conversation.
 
 
 Use 
@@ -34,13 +36,13 @@ simple call
 
 .. code-block:: bash
 
-    $> python3 -m zap2rst 'my conversation file with soebody.txt'
+    $> python3 -m zap2rst 'my conversation file with friend.txt'
 
 If media files are at other path use `-m` asrgs to inform the path
 
 .. code-block:: bash
 
-    $> python3 -m zap2rst -m /mediapath/medias 'my conversation file with soebody.txt'
+    $> python3 -m zap2rst -m /mediapath/medias 'my conversation file with friend.txt'
 
     >>> Output generated: output.rst
 
@@ -48,6 +50,30 @@ you may specify an output file name
 
 .. code-block:: bash
 
-    $> python3 -m zap2rst -o myconversation.rst 'my conversation file with soebody.txt'
+    $> python3 -m zap2rst -o myconversation.rst 'my conversation file with friend.txt'
 
     >>> Output generated: output.rst
+
+
++----------------------------------+------------------------------------------+------------------------------+-----------------------------+
+|      . . . .                     |               . . . . .                  | rst2pdf output.rst           | rst2html5 output.rst        |
++----------------------------------+------------------------------------------+------------------------------+-----------------------------+
+| Whatsapp Exported file           | Output RestructuredText File             | PDF file                     | HTML File                   |
++==================================+==========================================+==============================+=============================+
+| |whatsapp_conversation_original| | |whatsapp_conversation_restructuredtext| | |whatsapp_conversation_html| | |whatsapp_conversation_pdf| |
++----------------------------------+------------------------------------------+------------------------------+-----------------------------+
+
+
+.. 
+    cometário: alias to images 
+
+.. |whatsapp_conversation_pdf| image:: doc_images/whatsapp_conversation_pdf.png
+    :width: 210
+.. |whatsapp_conversation_html| image:: doc_images/whatsapp_conversation_html.png
+    :width: 210
+.. |whatsapp_conversation_restructuredtext| image:: doc_images/whatsapp_conversation_restructuredtext.png
+    :width: 210
+.. |whatsapp_conversation_original| image:: doc_images/whatsapp_conversation_original.png
+    :width: 210
+
+
